@@ -50,7 +50,7 @@ public class Main {
         Scanner scan = new Scanner(System.in);
 
         int N = scan.nextInt();
-        String string = scan.next();
+        String string = scan.nextLine();
         
         //String string = "4 18 22 15 50";
         //int N = 4;
