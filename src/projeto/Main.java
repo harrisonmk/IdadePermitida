@@ -35,7 +35,8 @@ Nao poderao entrar as idades:
 
 15
 
-*/
+ */
+
 
 
 package projeto;
@@ -49,33 +50,23 @@ public class Main {
         //a classe Scanner auxilia na leitura dos dados de entrada
         Scanner scan = new Scanner(System.in);
 
-        int N = scan.nextInt();
-        String string = scan.nextLine();
-        
-        //String string = "4 18 22 15 50";
-        //int N = 4;
+        int n = scan.nextInt();
 
-        //quebra string em várias substrings a partir de um caracter
-        String[] s = string.split(" ");
+        int[] array = new int[n];
 
-        
-
-        double[] idade = new double[N];
-        
-        //System.out.println(Arrays.toString(s));
-       // System.out.println(N);
-
-        for (int i = 0; i < N; i++) {
-
-            //System.out.println(s[i]);
-            idade[i] = Double.parseDouble(s[i]);
+        for (int i = 0; i < n; i++) {
+            array[i] = scan.nextInt();
 
         }
 
+        int[] idade = new int[n];
+
+        System.arraycopy(array, 0, idade, 0, n);
+
         System.out.println("Nao poderao entrar as idades: ");
-        for (int i = 0; i < N; i++) {
-            if (idade[i] < 18) {
-                System.out.println(idade[i]);
+        for (int j = 0; j < n; j++) {
+            if (idade[j] < 18) {
+                System.out.println(idade[j]);
             }
 
         }
